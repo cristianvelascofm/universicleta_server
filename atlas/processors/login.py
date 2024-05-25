@@ -11,13 +11,9 @@ def login(user, password):
     if usuario_registrado != False:
             if usuario_registrado['contrasena'] == pass_hash:
                 print('** INICIO DE SESIÓN EXITOSO')
-                role = usuario_registrado["cargo"]
-                area = usuario_registrado["dependencia"]
-                permisos = None
-                if "permisos" in usuario_registrado:
-                     permisos = usuario_registrado["permisos"]
+                role = usuario_registrado["rol"]
                 acces_token = create_access_token(identity=user)
-                return jsonify({"login": "ok", "acces_token": acces_token , "role": role, "area": area, "permisos": permisos})
+                return jsonify({"login": "ok", "acces_token": acces_token , "role": role})
             else:
                 print('** ERROR CONTRASEÑA')
                 return jsonify({"error": "Contraseña no  válida"})

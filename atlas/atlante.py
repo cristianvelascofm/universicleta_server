@@ -30,7 +30,24 @@ def get():
 @app.route('/',methods=['POST'])
 def executor():
     global json_data, tstart
-    pass
+    global json_data, tstart
+    print('\n* NUEVA SOLICITUD')
+    print('* HORA: ',time.localtime().tm_hour,':',time.localtime().tm_min,':',time.localtime().tm_sec)
+    tstart= time.time()
+    json_data = request.json
+
+    if json_data['action'] == 'login':
+        try:
+            print("** NUEVO INICIO DE SESIÓN")
+            usuario_login = json_data["username"]
+            password_login = json_data["password"]
+            inicio_sesion = login(usuario_login, password_login)
+            return inicio_sesion
+        except   Exception as e:
+            print(e)    
+            return jsonify({'error':'Error en la solicitud de inicio de sesión'}) 
+        
+    return jsonify({'error': 'Acción no válida'}), 400   
 
 if __name__ == '__main__':
     app.run(host = config.get_server_url(), port = config.get_server_port(), debug=True)
