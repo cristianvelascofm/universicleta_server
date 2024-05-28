@@ -1,0 +1,12 @@
+{
+    "biciletas":[
+        {
+            "id": 1,
+            "estacion": 1,
+            "nombre": "S23",
+            "ip_bicicleta": "237.84.2.178",
+            "puerto": "5050",
+            "estado": "disponible"
+        }
+    ]
+}

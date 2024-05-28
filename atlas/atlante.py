@@ -4,7 +4,8 @@ import uuid
 import sys
 import datetime
 import os
-
+import asyncio
+from processors.universicleta import comunicacion_8266
 from environment import config
 from processors.login import crear_usuario, login
 
@@ -46,6 +47,17 @@ def executor():
         except   Exception as e:
             print(e)    
             return jsonify({'error':'Error en la solicitud de inicio de sesión'}) 
+        
+    if json_data['action'] == 'ping':
+        try:
+            print("** COMUNICACIÓN ESP8266")
+            msg = json_data["msg"]
+            ping = asyncio.run(comunicacion_8266(msg))
+            return ping
+        except   Exception as e:
+            print(e)    
+            return jsonify({'error':'Error en la solicitud de inicio de sesión'}) 
+        
         
     return jsonify({'error': 'Acción no válida'}), 400   
 

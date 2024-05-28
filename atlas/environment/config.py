@@ -4,6 +4,8 @@ SERVER_PORT = "5050"
 JWT_SECRET_KEY = "Atl4nt3#$"
 
 
+
+
 def get_server_url():
     return SERVER_URL
 
