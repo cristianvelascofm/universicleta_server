@@ -11,6 +11,118 @@
                 {
                     "id": 1,
                     "nombre": "S23",
+                    "ip_bicicleta": "192.168.0.10",
+                    "estado": "disponible"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "estacion": "Facultad de Ingeniería Civil",
+            "ubicacion": "Coordenadas",
+            "total_biciletas": 20,
+            "ip_base": "192.168.0.10",
+            "puerto": "5050",
+            "bicicletas": [
+                {
+                    "id": 1,
+                    "nombre": "S23",
+                    "ip_bicicleta": "237.84.2.178",
+                    "estado": "disponible"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "estacion": "Facultad de Ciencias Humanas y Sociales",
+            "ubicacion": "Coordenadas",
+            "total_biciletas": 20,
+            "ip_base": "192.168.0.10",
+            "puerto": "5050",
+            "bicicletas": [
+                {
+                    "id": 1,
+                    "nombre": "S23",
+                    "ip_bicicleta": "237.84.2.178",
+                    "estado": "disponible"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "estacion": "Facultad de Ciencias Agrarías",
+            "ubicacion": "Coordenadas",
+            "total_biciletas": 20,
+            "ip_base": "192.168.0.10",
+            "puerto": "5050",
+            "bicicletas": [
+                {
+                    "id": 1,
+                    "nombre": "S23",
+                    "ip_bicicleta": "237.84.2.178",
+                    "estado": "disponible"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "estacion": "Facultad de Ingeniería Electrónica y Telecomunicaciones",
+            "ubicacion": "Coordenadas",
+            "total_biciletas": 20,
+            "ip_base": "192.168.0.10",
+            "puerto": "5050",
+            "bicicletas": [
+                {
+                    "id": 1,
+                    "nombre": "S23",
+                    "ip_bicicleta": "237.84.2.178",
+                    "estado": "disponible"
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "estacion": "Facultad de Ciencias Naturales, Exactas y de la Educación",
+            "ubicacion": "Coordenadas",
+            "total_biciletas": 20,
+            "ip_base": "192.168.0.10",
+            "puerto": "5050",
+            "bicicletas": [
+                {
+                    "id": 1,
+                    "nombre": "S23",
+                    "ip_bicicleta": "237.84.2.178",
+                    "estado": "disponible"
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "estacion": "Facultad de Derecho, Ciencias Políticas y Sociales",
+            "ubicacion": "Coordenadas",
+            "total_biciletas": 20,
+            "ip_base": "192.168.0.10",
+            "puerto": "5050",
+            "bicicletas": [
+                {
+                    "id": 1,
+                    "nombre": "S23",
+                    "ip_bicicleta": "237.84.2.178",
+                    "estado": "disponible"
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "estacion": "Sede Norte - Santander de Quilichao",
+            "ubicacion": "Coordenadas",
+            "total_biciletas": 20,
+            "ip_base": "192.168.0.10",
+            "puerto": "5050",
+            "bicicletas": [
+                {
+                    "id": 1,
+                    "nombre": "S23",
                     "ip_bicicleta": "237.84.2.178",
                     "estado": "disponible"
                 }

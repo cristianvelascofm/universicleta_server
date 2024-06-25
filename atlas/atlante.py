@@ -5,7 +5,7 @@ import sys
 import datetime
 import os
 import asyncio
-from processors.universicleta import comunicacion_8266
+from processors.universicleta import comunicacion_8266, obtener_estaciones
 from environment import config
 from processors.login import crear_usuario, login
 
@@ -47,6 +47,15 @@ def executor():
         except   Exception as e:
             print(e)    
             return jsonify({'error':'Error en la solicitud de inicio de sesión'}) 
+        
+    if json_data['action'] == 'obtener-estaciones':
+        try:
+            print("** OBTENER TODAS LAS ESTACIONES")
+            estaciones = obtener_estaciones()
+            return estaciones
+        except   Exception as e:
+            print(e)    
+            return jsonify({'error':'Error en la solicitud de inicio de sesión'})
         
     if json_data['action'] == 'ping':
         try:

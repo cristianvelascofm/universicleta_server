@@ -18,7 +18,7 @@ async def comunicacion_8266(msg):
 
             # Enviar el mensaje usando una solicitud HTTP POST asíncrona
             async with aiohttp.ClientSession() as session:
-                async with session.post(url, data={'message': msg}) as response:
+                async with session.post(url, data="vacio") as response:
                     if response.status == 200:
                         print("Mensaje enviado con éxito")
                         return {"status": "ok"}
@@ -35,3 +35,9 @@ async def comunicacion_8266(msg):
 
 # Función principal para ejecutar la función asíncrona
 
+
+
+def obtener_estaciones():
+    with open('opt/data/general/universicleta/estaciones.json', 'r', encoding='utf-8') as archivo:
+        estaciones = json.load(archivo)["estaciones"]
+        return estaciones
