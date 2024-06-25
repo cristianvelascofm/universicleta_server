@@ -61,11 +61,10 @@ def reservar_bicicleta(estacion_inicial):
                                     "bicicleta": bicicleta,
                                     "anclaje": anclaje
                                 }
-                        else:
-                            print("** ANCLAJE NO DISPONIBLE")
-                            return {
-                                "error": "Anclaje no disponible"
-                            }
+                    print("** ANCLAJE NO DISPONIBLE")
+                    return {
+                        "error": "Anclaje no disponible"
+                    }
                 else:
                     return {
                         "error": "Estación no encontrada"
