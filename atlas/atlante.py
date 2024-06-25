@@ -3,7 +3,6 @@ import json
 import uuid
 import sys
 import datetime
-import os
 import asyncio
 from processors.universicleta import comunicacion_8266, obtener_estaciones
 from environment import config

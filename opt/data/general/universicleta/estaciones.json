@@ -7,11 +7,23 @@
             "total_biciletas": 20,
             "ip_base": "192.168.0.10",
             "puerto": "5050",
-            "bicicletas": [
+            "anclajes": [
                 {
                     "id": 1,
-                    "nombre": "S23",
-                    "ip_bicicleta": "192.168.0.10",
+                    "nombre": "S01",
+                    "ip_anclaje": "192.168.0.10",
+                    "estado": "disponible"
+                },
+                {
+                    "id": 2,
+                    "nombre": "S02",
+                    "ip_anclaje": "192.168.0.10",
+                    "estado": "disponible"
+                },
+                {
+                    "id": 3,
+                    "nombre": "S03",
+                    "ip_anclaje": "192.168.0.10",
                     "estado": "disponible"
                 }
             ]
@@ -26,8 +38,8 @@
             "bicicletas": [
                 {
                     "id": 1,
-                    "nombre": "S23",
-                    "ip_bicicleta": "237.84.2.178",
+                    "nombre": "S02",
+                    "ip_anclaje": "237.84.2.178",
                     "estado": "disponible"
                 }
             ]
@@ -42,8 +54,8 @@
             "bicicletas": [
                 {
                     "id": 1,
-                    "nombre": "S23",
-                    "ip_bicicleta": "237.84.2.178",
+                    "nombre": "S03",
+                    "ip_anclaje": "237.84.2.178",
                     "estado": "disponible"
                 }
             ]
@@ -58,8 +70,8 @@
             "bicicletas": [
                 {
                     "id": 1,
-                    "nombre": "S23",
-                    "ip_bicicleta": "237.84.2.178",
+                    "nombre": "S04",
+                    "ip_anclaje": "237.84.2.178",
                     "estado": "disponible"
                 }
             ]
@@ -74,8 +86,8 @@
             "bicicletas": [
                 {
                     "id": 1,
-                    "nombre": "S23",
-                    "ip_bicicleta": "237.84.2.178",
+                    "nombre": "S04",
+                    "ip_anclaje": "237.84.2.178",
                     "estado": "disponible"
                 }
             ]
@@ -91,7 +103,7 @@
                 {
                     "id": 1,
                     "nombre": "S23",
-                    "ip_bicicleta": "237.84.2.178",
+                    "ip_anclaje": "237.84.2.178",
                     "estado": "disponible"
                 }
             ]
@@ -107,7 +119,7 @@
                 {
                     "id": 1,
                     "nombre": "S23",
-                    "ip_bicicleta": "237.84.2.178",
+                    "ip_anclaje": "237.84.2.178",
                     "estado": "disponible"
                 }
             ]
@@ -123,7 +135,7 @@
                 {
                     "id": 1,
                     "nombre": "S23",
-                    "ip_bicicleta": "237.84.2.178",
+                    "ip_anclaje": "237.84.2.178",
                     "estado": "disponible"
                 }
             ]

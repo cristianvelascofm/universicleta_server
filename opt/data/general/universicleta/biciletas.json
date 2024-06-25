@@ -3,9 +3,8 @@
         {
             "id": 1,
             "estacion": 1,
-            "nombre": "S23",
-            "ip_bicicleta": "237.84.2.178",
-            "puerto": "5050",
+            "tag_id": "E18-FF-52-4R",
+            "nombre" : "B15",
             "estado": "disponible"
         }
     ]

@@ -1,0 +1,18 @@
+{
+    "prestamos":[
+        {
+            "id": 1,
+            "estacion_inicio": 1,
+            "bicicleta": "S23",
+            "estado": "reserva",
+            "fecha_reserva": "2022-01-01",
+            "hora_reserva" : "",
+            "fecha_prestamo": "2022-01-01",
+            "hora_prestamo" : "",
+            "estacion_fin": "Facultad de Ingeniería Civil",
+            "fecha_devolucion": "2022-01-01",
+            "hora_devolucion" : ""
+
+        }
+    ]
+}

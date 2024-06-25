@@ -2,6 +2,8 @@ import json
 import aiohttp
 import asyncio
 from quart import Quart, jsonify, request
+
+from atlas.processors.gestion_esp import comunicar_esp
 app = Quart(__name__)
 
 async def comunicacion_8266(msg):
@@ -41,3 +43,38 @@ def obtener_estaciones():
     with open('opt/data/general/universicleta/estaciones.json', 'r', encoding='utf-8') as archivo:
         estaciones = json.load(archivo)["estaciones"]
         return estaciones
+    
+
+
+def reservar_bicicleta(estacion_inicial):
+    try:
+        with open('opt/data/general/universicleta/estaciones.json', 'r', encoding='utf-8') as archivo:
+            estaciones = json.load(archivo)["estaciones"]
+            for estacion in estaciones:
+                if estacion["id"] == estacion_inicial:
+                    anclajes = estacion["anclajes"]
+                    for anclaje in anclajes:
+                        if anclaje["estado"] == "disponible":
+                            bicicleta = comunicar_esp(anclaje["ip_anclaje"])
+                            if comunicar_esp:
+                                return {
+                                    "bicicleta": bicicleta,
+                                    "anclaje": anclaje
+                                }
+                        else:
+                            print("** ANCLAJE NO DISPONIBLE")
+                            return {
+                                "error": "Anclaje no disponible"
+                            }
+                else:
+                    return {
+                        "error": "Estación no encontrada"
+                    }
+    except FileNotFoundError as e:
+        print('Error al encontrar el archivo:', e)
+        return {"error": str(e)}
+    except aiohttp.ClientError as e:
+        print('Error al enviar la solicitud HTTP:', e)
+        return {"error": str(e)}                   
+
+
